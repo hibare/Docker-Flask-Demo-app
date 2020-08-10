@@ -27,4 +27,4 @@ jobs:
       env:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
       with:
-        jekyll_src: 'docs'
+        jekyll_src: 'Docker-Flask-Demo-app/docs'
