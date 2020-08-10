@@ -23,4 +23,3 @@ jobs:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
       with:
         jekyll_src: 'docs'
-        gem_src: 'docs'
