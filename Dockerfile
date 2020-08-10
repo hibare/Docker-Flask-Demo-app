@@ -1,4 +1,4 @@
-FROM amd64/python:3-alpine
+FROM python:3-slim
 
 LABEL authors="Hibare (docker@hibare.in)"
 
