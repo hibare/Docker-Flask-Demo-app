@@ -10,13 +10,21 @@ on:
     tags:
       - v*
 
+permissions:
+  contents: read
+
 jobs:
   buildx:
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit
+
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
       -
         name: Prepare
         id: prepare
@@ -46,7 +54,7 @@ jobs:
             ${TAGS} --file Dockerfile .
       -
         name: Set up Docker Buildx
-        uses: crazy-max/ghaction-docker-buildx@v3
+        uses: crazy-max/ghaction-docker-buildx@126d331dc69f4a1aa02452e374835e6a5d565613 # v3.3.1
       -
         name: Docker Buildx (build)
         run: |
