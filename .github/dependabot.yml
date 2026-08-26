@@ -3,24 +3,24 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
 
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
 
   - package-ecosystem: bundler
     directory: /docs
     schedule:
-      interval: weekly
+      interval: monthly
 
   - package-ecosystem: pip
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
 
   - package-ecosystem: pre-commit
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
