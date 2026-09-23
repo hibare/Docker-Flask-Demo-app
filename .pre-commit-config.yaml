@@ -40,6 +40,6 @@ repos:
           - --profile=black
 
   - repo: https://github.com/pycqa/flake8
-    rev: c48217e1fc006c2dddd14df54e83b67da15de5cd # 7.3.0
+    rev: 31405090a83cade9350502e481dcd1f032cb50b9 # 7.4.0
     hooks:
       - id: flake8
